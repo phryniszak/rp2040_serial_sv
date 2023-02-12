@@ -1,0 +1,37 @@
+{
+    // These settings tweaks to the cmake plugin will ensure
+    // that you debug using cortex-debug instead of trying to launch
+    // a Pico binary on the host
+    "cmake.statusbar.advanced": {
+        "debug": {
+            "visibility": "hidden"
+        },
+        "kit": {
+            "visibility": "hidden"
+        },
+        "launch": {
+            "visibility": "hidden"
+        },
+        "buildTarget": {
+            "visibility": "hidden"
+        }
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    // pass arguments to cmake
+    "cmake.configureArgs": [
+        "-DTEST_ARG=/home/pawel/RP2040/pico-sdk/"
+    ],
+    "cmake.configureOnEdit": false,
+    "cmake.configureOnOpen": false,
+    "cmake.buildBeforeRun": false,
+    "cortex-debug.openocdPath": "/home/pawel/RP2040/openocd-bin/openocd",
+    "cortex-debug.armToolchainPath.linux": "/home/pawel/RP2040/gcc-arm-none-eabi-10.3-2021.10/bin/",
+    "cortex-debug.registerUseNaturalFormat": true,
+    "files.associations": {
+        "time.h": "c",
+        "clocks.h": "c",
+        "segger_sysview.h": "c",
+        "segger_rtt.h": "c"
+    },
+    "cortex-debug.variableUseNaturalFormat": false
+}
